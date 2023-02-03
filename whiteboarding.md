@@ -12,9 +12,9 @@ Output: "Jasmine%20Ann%20Jones"
 let input = "Jasmine Ann Jones"
 Working:
 function stringToUrl(input) {
-  let arr = input.split(" ");
-  let arrOut =  arr.join("%20");
-  return arrOut
+  let input = input.split(" ");
+  let output =  output.join("%20");
+  return output;
 }
 
 OG:
@@ -48,7 +48,7 @@ Input: [7, 9, "hi", 12, "hi", 7, 53]
 Output: [7, 9, "hi", 12, 53]
 
 without filter()
-input = [7, 9, "hi", 12, "hi", 7, 53]
+input = [7, 9, "hi", 12, "hi", 7, "", 53]
 
 //works, but will push empty values
 function deDupe(input){
@@ -57,7 +57,7 @@ function deDupe(input){
   
   for (let i=0; i<input.length; i++){
     if (input[i] != input [i+1])
-    check[i] = input[i]
+    check.push(input[i])
   }
   return check;
 }
@@ -71,7 +71,15 @@ function deDupe2(input){
   return uniqueSet;
 }
 
-
+using filter()
+function filterDupe(input){
+  return inputArray.filter( (element, i, input) => {
+    if (inputArray.lastIndexOf(e) !== ){
+      arr.splice(inputArray.lastIndexOf(e), 1);
+    }
+    return e
+  }
+}
 
 =============================================================================================
 Question #3: Compressing Strings
@@ -103,15 +111,6 @@ function compress(input){
 }
 
 
-        }
-        else
-        {
-          cout << str[i] << count;
-        }
-         
-    } 
-} 
-
 =============================================================================================
 Question #4: Checking for Uniqueness
 
@@ -119,12 +118,18 @@ Write an algorithm that determines whether all the elements in a string are uniq
 Example
 
 Input: "hello"
-
 Output: false
-
 Input: "copyright"
-
 Output: true
+
+function uniqueChars(input){
+  for (let i = 0; i < input.lengh; i++)
+    for (let j = i + 1; j < input.length; j++)
+      if (str[i] === str[j]){
+        return false;
+      }
+  return true;
+}
 
 =============================================================================================
 Question #5: Array Sorting
