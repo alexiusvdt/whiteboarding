@@ -10,10 +10,10 @@ Input: "Jasmine Ann Jones"
 Output: "Jasmine%20Ann%20Jones"
 
 let input = "Jasmine Ann Jones"
-Working:
+
 function stringToUrl(input) {
-  let input = input.split(" ");
-  let output =  output.join("%20");
+  let string = input.split(" ");
+  let output =  string.join("%20");
   return output;
 }
 
@@ -24,9 +24,9 @@ function stringToUrl(input){
     arr.splice(i, 0, "%20");
   }
   let outUrl = arr.toString()
-  outUrl = outUrl.replaceAll(',' , '')
   return outUrl;
 }
+
 
 Recursive:
 function recursive(input){
@@ -149,3 +149,20 @@ Example
 Input: [9, 2, 7, 12]
 
 Output: [2, 7, 9, 12]
+
+function insertSort(input) 
+{ 
+    let i, key, j; 
+    for (i = 1; i < input.length; i++)
+    { 
+        key = input[i]; 
+        j = i - 1; 
+      
+        while (j >= 0 && input[j] > key)
+        { 
+            input[j + 1] = input[j]; 
+            j = j - 1; 
+        } 
+        input[j + 1] = key; 
+    } 
+} 
